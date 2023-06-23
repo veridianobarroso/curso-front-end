@@ -35,7 +35,8 @@ Módulo do Curso de Engenharia de Software (UFAC/COMPAL)
     Atividades práticas para possam aplicar os conceitos aprendidos, através da criação de páginas web, estilização de elementos, implementação de funcionalidades interativas e desenvolvimento de projetos.
 
     Os encontros ocorrem três vezes por semana (segunda, quarta e sexta-feira) no período das 18h às 21:20, no Laboratório de Estatística Sala 01, Bloco Jersey Nazareno. 
-Ao começo de cada encontro, ocorre uma revisão rápida do conteúdo abordado no encontro anterior para melhor acompanhamento das atividades. Todo o conteúdo utilizado será disponibilizado em um repositório virtual.
+    
+    Ao começo de cada encontro, ocorre uma revisão rápida do conteúdo abordado no encontro anterior para melhor acompanhamento das atividades. Todo o conteúdo utilizado será disponibilizado em um repositório virtual.
 
 6. **Recursos Didáticos**
 
