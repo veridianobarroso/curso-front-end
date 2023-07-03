@@ -8,3 +8,5 @@
 - Seletores e propriedades CSS
 - Estilização de texto, cores e fundos
 - Posicionamento de elementos e layouts
+
+Abre o arquivo index.html no navegador para visualizar o conteúdo da unidade.
