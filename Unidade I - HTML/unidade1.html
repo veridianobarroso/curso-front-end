@@ -167,55 +167,142 @@ realizar atualizações regulares para manter a aplicação relevante e funciona
         <ul>
             <li>
                 <p>
-                    <b>1. Seletores:</b> Os seletores são usados para identificar os elementos HTML aos quais você deseja aplicar estilos. Existem vários tipos de seletores, como seletores de elemento (por exemplo, `p` para parágrafos), seletores de classe (por exemplo, `.nome-da-classe`), seletores de ID (por exemplo, `#id-do-elemento`), seletores de atributo e seletores de descendência.
+                    <b>1. Seletores:</b> Os seletores são usados para identificar os elementos HTML aos quais você deseja aplicar estilos.
+                     Existem vários tipos de seletores, como seletores de elemento (por exemplo, <b> "p" </b>para parágrafos), 
+                     seletores de classe (por exemplo, <b>".nome-da-classe"</b>), seletores de ID (por exemplo, <b> "#id-do-elemento"</b>), 
+                     seletores de atributo e seletores de descendência.
                 </p>
             </li>
             <li>
                 <p>
-                    <b>2. Propriedades:</b> As propriedades são utilizadas para definir o estilo de um elemento selecionado. Existem diversas propriedades CSS disponíveis, como `color` (cor do texto), `font-size` (tamanho da fonte), `background-color` (cor de fundo), `margin` (margem externa), `padding` (espaçamento interno), entre outras.
+                    <b>2. Propriedades:</b> As propriedades são utilizadas para definir o estilo de um elemento selecionado. 
+                    Existem diversas propriedades CSS disponíveis, como <b>color</b> (cor do texto), <b>font-size</b>
+                     (tamanho da fonte), <b>background-color</b> (cor de fundo), <b> margin</b> (margem externa), 
+                     <b>padding</b> (espaçamento interno), entre outras.
                 </p>
             </li>
             <li>
                 <p>
-                   <b> 3. Valores: </b>As propriedades CSS recebem valores que determinam como o estilo será aplicado. Por exemplo, `color: blue;` define a cor do texto como azul. Os valores podem ser palavras-chave pré-definidas (como `blue`, `red`, `transparent`) ou valores numéricos (como `10px`, `2em`).
+                   <b> 3. Valores: </b>As propriedades CSS recebem valores que determinam como o estilo será aplicado. 
+                   Por exemplo, <b>color: blue;</b> define a cor do texto como azul.
+                    Os valores podem ser palavras-chave pré-definidas (como blue, red, transparent)
+                     ou valores numéricos (como 10px, 2em).
                 </p>
             </li>
             <li>
                 <p>
-                    <b>4. Classes e IDs: </b>Classes e IDs são atributos HTML que podem ser utilizados como seletores CSS para aplicar estilos específicos a elementos. Uma classe é definida usando o atributo `class` (por exemplo, `<div class="nome-da-classe">`) e pode ser referenciada no CSS usando `.nome-da-classe`. Um ID é definido usando o atributo `id` (por exemplo, `<div id="id-do-elemento">`) e pode ser referenciado no CSS usando `#id-do-elemento`. A diferença principal é que um ID deve ser único na página, enquanto uma classe pode ser aplicada a vários elementos.
+                    <b>4. Classes e IDs: </b>Classes e IDs são atributos HTML que podem ser utilizados 
+                    como seletores CSS para aplicar estilos específicos a elementos. U
+                    ma classe é definida usando o atributo <b>class</b> (por exemplo, &lt; div class="nome-da-classe">) 
+                    e pode ser referenciada no CSS usando <b>.nome-da-classe</b>. 
+                    Um ID é definido usando o atributo <b>id</b> (por exemplo, &lt;div id="id-do-elemento">) 
+                    e pode ser referenciado no CSS usando <b>#id-do-elemento</b>. 
+                    A diferença principal é que um ID deve ser único na página, enquanto uma classe pode ser aplicada a vários elementos.
                     </p>
             </li>
             <li>
                 <p>
                     <b>5. Regras CSS:</b> Uma regra CSS consiste em um seletor seguido por um conjunto de propriedades e valores entre chaves. Por exemplo:
                 </p>
+                
+                p { color: blue; font-size: 16px; }
+                <p>  
+                  Nesse exemplo, todas as tags <b>p</b> (parágrafos) terão o texto em azul e tamanho de fonte de 16 pixels.</p>
             </li>
             <li>
                 <p>
-                    <b>5. Regras CSS:</b> Uma regra CSS consiste em um seletor seguido por um conjunto de propriedades e valores entre chaves. Por exemplo:
+                    <b>6. Cascata:</b> A cascata é um dos princípios fundamentais do CSS. 
+                    Ela define como os estilos são aplicados e resolvidos quando existem várias regras conflitantes. 
+                     A cascata leva em consideração a especificidade dos seletores, a ordem em que as regras são declaradas e a herança de estilos dos elementos pais.
+
                 </p>
             </li>
         </ul>
-p {
-  color: blue;
-  font-size: 16px;
-}
 
-Nesse exemplo, todas as tags `p` (parágrafos) terão o texto em azul e tamanho de fonte de 16 pixels.
 
-6. Cascata: A cascata é um dos princípios fundamentais do CSS. Ela define como os estilos são aplicados e resolvidos quando existem várias regras conflitantes. A cascata leva em consideração a especificidade dos seletores, a ordem em que as regras são declaradas e a herança de estilos dos elementos pais.
-
-Esses são apenas alguns dos conceitos básicos do CSS. O CSS oferece uma ampla variedade de recursos e funcionalidades que permitem personalizar completamente a aparência dos elementos em uma página web.
 
     </details>
     <details>
         <summary>Seletores e propriedades CSS</summary>
+        <p>
+            Com a chegadas das CSS3, aplicar estilos a elementos individualmente se tornou muito mais fácil.
+         Os novos seletores permitem identificar elementos com base em seus atributos, posição em que aparecem no “elemento pai”,
+        estado (habilitado/desabilitado), entre outros.
+        </p>    
+
+        <ul>
+            <li>
+                <p>
+                    <b>1. Seletores por atributos </b> Estes seletores permitem aplicar uma determinada formatação a certos elementos com base no valor de um atributo
+
+                </p>
+                <ul>
+                    <li><b>E[atributo="valor"]:</b> elementos do tipo E cujo atributo seja igual a valor.</li>
+                    <li><b>E[atributo^="valor"]:</b> elementos do tipo E cujo valor do atributo comece com a palavra valor.</li>
+                    <li><b>E[atributo$="valor"]:</b> elementos do tipo E cujo valor do atributo termine com a palavra valor.</li>
+                    <li> <b>E[atributo*="valor"]:</b> elementos do tipo E cujo valor do atributo contenha a palavra valor.</li>        
+                </ul>
+                Exemplo: div[id="cabecalho"]{ font-size:xx-large; }
+            </li>
+            <li>
+                <p>
+                    <b>2. Seletores por posição:</b> Estes seletores funcionam com base na posição do elemento no documento ou no controle que o contêm (elemento pai). 
+                    Por exemplo, podemos selecionar o segundo elemento contido dentro de uma div, independente do seu tipo.
+                </p>
+                <ul>
+                   <li>root: seleciona o elemento raiz do documento, no caso, é a tag HTML. </li>
+                   <li>E:nth-child(N): seleciona o elemento do tipo E que seja o N-ésimo filho do seu elemento pai. </li>
+                   <li>E:nth-last-child(N): semelhante ao anterior, mas começando a contagem de baixo para cima. </li>
+                   <li>E:nth-of-type(N): seleciona o elemento que seja o N-ésimo do seu tipo. </li>
+                   <li>E:nth-last-of-type(N): semelhante ao anterior, mas contando de baixo para cima. </li>
+                   <li>E:last-child: seleciona o elemento E que seja o último filho do elemento pai. </li>
+                   <li>E:first-of-type: seleciona o elemento E que seja o primeiro de seu tipo dentro do elemento pai. </li>
+                   <li>E:last -of-type: semelhante ao anterior, mas com o último elemento. </li>
+                   <li>E:only-child: seleciona o elemento E que seja o único filho do seu elemento pai. </li>
+                   <li>E:only-of-type: seleciona o elemento que seja o único filho deste tipo dentro de seu elemento pai. </li>
+                </ul>
+                Exemplo: div:nth-child(1){ background:red; }
+            </li>
+            <li>
+                <p>
+                   <b> 3. Seletores por estado: </b>Estes, por sua vez, funcionam com base no estado atual do controle 
+                   (vazio, habilitado, desabilitado etc.). A seguir, cada um é explicado, facilitando o entendimento.
+                    <ul>
+                        <li>E:empty: seleciona o elemento E que esteja vazio, sem nenhum elemento filho.</li>
+                        <li>:target: seleciona o objeto alvo de um link interno (aqueles que são precedidos por # e que direcionam o usuário para um elemento na página).</li>
+                        <li>E:enabled: seleciona o elemento E que esteja habilitado para o usuário</li>
+                        <li>E:disabled: semelhante ao anterior, mas para elementos desabilitados.</li>
+                        <li>E:checked: seleciona elementos que estejam marcados (radios e checkboxes)</li>
+                        <li>::selection: formata o conteúdo selecionado pelo usuário.</li>
+                        <li>:not(P): seleciona os elementos que não atendem ao seletor simples P.</li>
+                    </ul>
+
+                </p>
+            </li>
+            <li>
+                <p>
+                   <b> 4. Combinadores: </b>
+                   Combina outros seletores para direcionar os elementos em nossos documentos
+                </p>
+                Por exemplo: article > p { text-color: red}
+            </li>
+        </ul>
+
+
     </details>
     <details>
         <summary>Estilização de texto, cores e fundos</summary>
+       font-size
+       color
+       background
     </details>
     <details>
         <summary>Posicionamento de elementos e layouts</summary>
+        display
+        grid
+        flexbox
+        position
+
     </details>
 
     <h3>Complementos</h3>
