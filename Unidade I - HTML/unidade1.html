@@ -195,8 +195,7 @@ realizar atualizações regulares para manter a aplicação relevante e funciona
             <li>
                 <p>
                     <b>4. Classes e IDs: </b>Classes e IDs são atributos HTML que podem ser utilizados 
-                    como seletores CSS para aplicar estilos específicos a elementos. U
-                    ma classe é definida usando o atributo <b>class</b> (por exemplo, &lt; div class="nome-da-classe">) 
+                    como seletores CSS para aplicar estilos específicos a elementos. Uma classe é definida usando o atributo <b>class</b> (por exemplo, &lt; div class="nome-da-classe">) 
                     e pode ser referenciada no CSS usando <b>.nome-da-classe</b>. 
                     Um ID é definido usando o atributo <b>id</b> (por exemplo, &lt;div id="id-do-elemento">) 
                     e pode ser referenciado no CSS usando <b>#id-do-elemento</b>. 
@@ -245,7 +244,7 @@ realizar atualizações regulares para manter a aplicação relevante e funciona
                     <li><b>E[atributo$="valor"]:</b> elementos do tipo E cujo valor do atributo termine com a palavra valor.</li>
                     <li> <b>E[atributo*="valor"]:</b> elementos do tipo E cujo valor do atributo contenha a palavra valor.</li>        
                 </ul>
-                Exemplo: div[id="cabecalho"]{ font-size:xx-large; }
+                <p>Exemplo: div[id="cabecalho"]{ font-size:xx-large; }</p>
             </li>
             <li>
                 <p>
@@ -253,31 +252,31 @@ realizar atualizações regulares para manter a aplicação relevante e funciona
                     Por exemplo, podemos selecionar o segundo elemento contido dentro de uma div, independente do seu tipo.
                 </p>
                 <ul>
-                   <li>root: seleciona o elemento raiz do documento, no caso, é a tag HTML. </li>
-                   <li>E:nth-child(N): seleciona o elemento do tipo E que seja o N-ésimo filho do seu elemento pai. </li>
-                   <li>E:nth-last-child(N): semelhante ao anterior, mas começando a contagem de baixo para cima. </li>
-                   <li>E:nth-of-type(N): seleciona o elemento que seja o N-ésimo do seu tipo. </li>
-                   <li>E:nth-last-of-type(N): semelhante ao anterior, mas contando de baixo para cima. </li>
-                   <li>E:last-child: seleciona o elemento E que seja o último filho do elemento pai. </li>
-                   <li>E:first-of-type: seleciona o elemento E que seja o primeiro de seu tipo dentro do elemento pai. </li>
-                   <li>E:last -of-type: semelhante ao anterior, mas com o último elemento. </li>
-                   <li>E:only-child: seleciona o elemento E que seja o único filho do seu elemento pai. </li>
-                   <li>E:only-of-type: seleciona o elemento que seja o único filho deste tipo dentro de seu elemento pai. </li>
+                   <li><b>root:</b> seleciona o elemento raiz do documento, no caso, é a tag HTML. </li>
+                   <li><b>E:nth-child(N):</b> seleciona o elemento do tipo E que seja o N-ésimo filho do seu elemento pai. </li>
+                   <li><b>E:nth-last-child(N):</b> semelhante ao anterior, mas começando a contagem de baixo para cima. </li>
+                   <li><b>E:nth-of-type(N):</b> seleciona o elemento que seja o N-ésimo do seu tipo. </li>
+                   <li><b>E:nth-last-of-type(N):</b> semelhante ao anterior, mas contando de baixo para cima. </li>
+                   <li><b>E:last-child:</b> seleciona o elemento E que seja o último filho do elemento pai. </li>
+                   <li><b>E:first-of-type:</b> seleciona o elemento E que seja o primeiro de seu tipo dentro do elemento pai. </li>
+                   <li><b>E:last -of-type:</b> semelhante ao anterior, mas com o último elemento. </li>
+                   <li><b>E:only-child:</b> seleciona o elemento E que seja o único filho do seu elemento pai. </li>
+                   <li><b>E:only-of-type:</b> seleciona o elemento que seja o único filho deste tipo dentro de seu elemento pai. </li>
                 </ul>
-                Exemplo: div:nth-child(1){ background:red; }
+                 <p>Exemplo: div:nth-child(1){ background:red; }</p>
             </li>
             <li>
                 <p>
                    <b> 3. Seletores por estado: </b>Estes, por sua vez, funcionam com base no estado atual do controle 
                    (vazio, habilitado, desabilitado etc.). A seguir, cada um é explicado, facilitando o entendimento.
                     <ul>
-                        <li>E:empty: seleciona o elemento E que esteja vazio, sem nenhum elemento filho.</li>
-                        <li>:target: seleciona o objeto alvo de um link interno (aqueles que são precedidos por # e que direcionam o usuário para um elemento na página).</li>
-                        <li>E:enabled: seleciona o elemento E que esteja habilitado para o usuário</li>
-                        <li>E:disabled: semelhante ao anterior, mas para elementos desabilitados.</li>
-                        <li>E:checked: seleciona elementos que estejam marcados (radios e checkboxes)</li>
-                        <li>::selection: formata o conteúdo selecionado pelo usuário.</li>
-                        <li>:not(P): seleciona os elementos que não atendem ao seletor simples P.</li>
+                        <li><b>E:empty:</b> seleciona o elemento E que esteja vazio, sem nenhum elemento filho.</li>
+                        <li><b>:target:</b> seleciona o objeto alvo de um link interno (aqueles que são precedidos por # e que direcionam o usuário para um elemento na página).</li>
+                        <li><b>E:enabled:</b> seleciona o elemento E que esteja habilitado para o usuário</li>
+                        <li><b>E:disabled:</b> semelhante ao anterior, mas para elementos desabilitados.</li>
+                        <li><b>E:checked:</b> seleciona elementos que estejam marcados (radios e checkboxes)</li>
+                        <li><b>::selection:</b> formata o conteúdo selecionado pelo usuário.</li>
+                        <li><b>:not(P):</b> seleciona os elementos que não atendem ao seletor simples P.</li>
                     </ul>
 
                 </p>
@@ -287,7 +286,7 @@ realizar atualizações regulares para manter a aplicação relevante e funciona
                    <b> 4. Combinadores: </b>
                    Combina outros seletores para direcionar os elementos em nossos documentos
                 </p>
-                Por exemplo: article > p { text-color: red}
+                <p>Por exemplo: article > p { text-color: red}</p>
             </li>
         </ul>
 
@@ -295,17 +294,83 @@ realizar atualizações regulares para manter a aplicação relevante e funciona
     </details>
     <details>
         <summary>Formatação: Estilização de texto, cores e fundos</summary>
-       font-size
-       color
-       background
+        <p><b>Na estilização de texto</b>, utilizamos propriedades como <b style="color: red;">color</b> para definir a cor do texto, 
+            <b style="color: red;">font-size</b> para ajustar o tamanho da fonte, <b style="color: red;">font-weight</b> para controlar a espessura da fonte, 
+            <b style="color: red;">text-decoration</b> para adicionar uma decoração ao texto (como sublinhado), 
+            <b style="color: red;">text-align</b> para alinhar o texto e <b style="color: red;">font-family</b> para definir a família da fonte.
+        </p>
+        <p>
+            <b>Na estilização de cores e fundos</b>, utilizamos propriedades como <b style="color: blue;">background-color </b>
+            para definir a cor de fundo de um elemento, <b style="color: blue;">border </b>para adicionar uma borda, 
+            <b style="color: blue;">text-shadow e box-shadow </b>para criar sombras de texto e sombras de caixa.
+            
+        </p>
+        <p>
+            Esses são apenas alguns exemplos de como estilizar texto, cores e fundos usando CSS. 
+            Você pode experimentar e ajustar as propriedades para atender às suas necessidades de design.
+        </p>
+    <p>
+        Estrutura básica de formatação<br>
+        <a href="exemplocores.html" target="_blank">#Exemplo de formatação</a>  
+    </p>
+
     </details>
     <details>
         <summary>Formatação: Posicionamento de elementos e layouts</summary>
-        display
-        grid
-        flexbox
-        position
+        <p>
 
+            O posicionamento dos elementos em CSS pode ser controlado usando a propriedade display. Aqui estão alguns valores dessa propriedade e como eles afetam o posicionamento dos elementos:
+        </p>
+<ol>
+    <li>
+        <strong>display: block;</strong>
+        <ul>
+            <li>Transforma o elemento em um bloco.</li>
+            <li>Ocupa toda a largura disponível e inicia uma nova linha.</li>
+            <li>Pode definir a largura e altura do elemento.</li>
+            <li>Margens verticais e horizontais são aplicáveis.</li>
+        </ul>
+    </li>
+    <li>
+        <strong>display: inline;</strong>
+        <ul>
+            <li>Transforma o elemento em uma linha de texto.</li>
+            <li>Ocupa apenas o espaço necessário ao conteúdo.</li>
+            <li>Não é possível definir largura e altura.</li>
+            <li>Margens horizontais são aplicáveis, mas margens verticais não.</li>
+        </ul>
+    </li>
+    <li>
+        <strong>display: inline-block;</strong>
+        <ul>
+            <li>Combina as características de block e inline.</li>
+            <li>Ocupa apenas o espaço necessário ao conteúdo.</li>
+            <li>Permite definir largura e altura do elemento.</li>
+            <li>Margens verticais e horizontais são aplicáveis.</li>
+        </ul>
+    </li>
+    <li>
+        <strong>display: flex;</strong>
+        <ul>
+            <li>Cria um container flexível que organiza os elementos filhos em uma linha ou coluna.</li>
+            <li>Permite controlar a posição e o dimensionamento dos elementos filhos.</li>
+            <li>Propriedades como justify-content e align-items são usadas para alinhar e distribuir os elementos.</li>
+        </ul>
+    </li>
+    <li>
+        <strong>display: grid;</strong>
+        <ul>
+            <li>Cria um container de layout em grade bidimensional.</li>
+            <li>Os elementos podem ser posicionados em células de linhas e colunas.</li>
+            <li>Oferece controle preciso sobre a posição e o dimensionamento dos elementos.</li>
+        </ul>
+    </li>
+</ol>
+
+<p>
+    Estrutura básica de posicionamento HTML<br>
+    <a href="exemplodisplay.html" target="_blank">#Exemplo de Display em HTML </a>  
+</p>
     </details>
 
     <h3>Complementos</h3>
@@ -315,6 +380,7 @@ realizar atualizações regulares para manter a aplicação relevante e funciona
         <b>Versão:</b> 5.7.9<br>
         <b>Editor:</b> Ritwick Dey<br>
     </div>
+    <br>
     <div>
         <b>Nome:</b> Auto Rename Tag <a href="https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag">https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag</a><br>
         <b>Descrição:</b> Auto rename paired HTML/XML tag<br>
