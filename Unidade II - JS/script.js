@@ -1,4 +1,36 @@
-// Declaração de variáveis
+//Tipos de variáveis
+
+// Variáveis numéricas
+var idade = 25;
+var altura = 1.75;
+
+// Variável de texto (string)
+var nome = "João";
+
+// Variável booleana
+var estudante = true;
+var trabalhador = false;
+
+// Variável de array
+var frutas = ["maçã", "banana", "laranja"];
+
+// Variável de objeto
+var pessoa = {
+  nome: "Maria",
+  idade: 30,
+  altura: 1.65
+};
+
+// Variável indefinida
+var valorIndefinido;
+
+// Variável nula
+var valorNulo = null;
+
+///////////////////////////////////////////////////////
+
+
+// Exemplo
 var nome = "João";
 var idade = 25;
 var altura = 1.75;
@@ -22,3 +54,5 @@ console.log("Altura em centímetros: " + alturaEmMetros);
 // Neste exemplo, declaramos quatro variáveis: nome, idade, altura e estudante. Em seguida, exibimos seus valores utilizando a função console.log().
 
 // Após isso, realizamos algumas operações com as variáveis, como somar um valor à idade e multiplicar a altura por 100. Novamente, utilizamos console.log() para exibir os resultados.
+
+

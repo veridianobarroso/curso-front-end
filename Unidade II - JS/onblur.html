@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exemplo de Evento onBlur</title>
+</head>
+<body>
+
+  <input type="text" id="meuInput" onblur="validarCampo()">
+
+  <script>
+    function validarCampo() {
+      var input = document.getElementById("meuInput");
+      var valor = input.value.trim();
+
+      if (valor === "") {
+        input.style.border = "2px solid red";
+        console.log("Campo vazio! Por favor, preencha o campo.");
+      } else {
+        input.style.border = "";
+        console.log("Campo preenchido corretamente. Valor: " + valor);
+      }
+    }
+  </script>
+
+</body>
+</html>
+<!-- 
+
+Neste exemplo, temos um campo de input <input type="text"> com o id "meuInput". O evento onblur é adicionado ao campo de input, e quando o campo perde o foco, a função validarCampo() é chamada.
+
+Dentro da função validarCampo(), obtemos a referência ao elemento do input usando o método getElementById(). Em seguida, capturamos o valor do campo e removemos quaisquer espaços em branco no início e no final usando o método trim().
+
+Verificamos se o valor do campo é uma string vazia. Se for vazio, adicionamos uma borda vermelha ao campo usando a propriedade style.border e exibimos uma mensagem de erro no console.
+
+Caso contrário, se o campo tiver um valor, removemos qualquer estilo de borda personalizada e exibimos uma mensagem de sucesso no console, mostrando o valor preenchido corretamente. -->

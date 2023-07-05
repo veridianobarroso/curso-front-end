@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exemplo de Evento onKeyPress</title>
+</head>
+<body>
+
+  <input type="text" id="meuInput" onkeypress="mostrarTecla(event)">
+
+  <script>
+    function mostrarTecla(event) {
+      var tecla = event.key;
+      console.log("Tecla pressionada: " + tecla);
+    }
+  </script>
+
+</body>
+</html>
+<!-- Neste exemplo, temos um campo de input <input type="text"> com o id "meuInput". O evento onkeypress é adicionado ao campo de input, e quando uma tecla é pressionada no campo, a função mostrarTecla() é chamada.
+
+Dentro da função mostrarTecla(), recebemos o objeto de evento como parâmetro, que contém informações sobre o evento. Usamos a propriedade key do objeto event para obter o valor da tecla pressionada.
+
+Em seguida, exibimos a tecla pressionada no console, concatenando-a com uma mensagem. -->

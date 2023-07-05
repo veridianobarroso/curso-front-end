@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exemplo de Evento onFocus</title>
+</head>
+<body>
+
+  <input type="text" id="meuInput" onfocus="realcarCampo()">
+
+  <script>
+    function realcarCampo() {
+      var input = document.getElementById("meuInput");
+      input.style.border = "2px solid blue";
+    }
+  </script>
+
+</body>
+</html>
+<!-- Neste exemplo, temos um campo de input <input type="text"> com o id "meuInput". O evento onfocus é adicionado ao campo de input, e quando o campo recebe o foco, a função realcarCampo() é chamada.
+
+Dentro da função realcarCampo(), obtemos a referência ao elemento do input usando o método getElementById(). Em seguida, alteramos o estilo da borda do campo, definindo uma borda azul de 2 pixels usando a propriedade style.border.
+
+Quando você abrir a página e clicar no campo de input, ele será realçado com uma borda azul. -->

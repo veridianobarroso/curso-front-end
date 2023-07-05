@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exemplo de Evento onSubmit</title>
+</head>
+<body>
+
+  <form onsubmit="validarFormulario(event)">
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome">
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email">
+
+    <button type="submit">Enviar</button>
+  </form>
+
+  <script>
+    function validarFormulario(event) {
+      event.preventDefault(); // Evita o envio do formulário
+
+      var nome = document.getElementById("nome").value;
+      var email = document.getElementById("email").value;
+
+      if (nome === "" || email === "") {
+        console.log("Por favor, preencha todos os campos.");
+      } else {
+        console.log("Formulário enviado com sucesso!");
+        console.log("Nome: " + nome);
+        console.log("Email: " + email);
+        // Realizar outras operações com os dados do formulário...
+      }
+    }
+  </script>
+
+</body>
+</html>
+
+<!-- Neste exemplo, temos um formulário HTML com campos de input para nome e email. O evento onsubmit é adicionado ao formulário, e quando o formulário é enviado (clique no botão "Enviar" ou pressione Enter), a função validarFormulario() é chamada.
+
+Dentro da função, recebemos o objeto de evento como parâmetro e usamos o método preventDefault() para evitar o comportamento padrão de envio do formulário, que é recarregar a página.
+
+Em seguida, obtemos os valores dos campos de input de nome e email usando os métodos getElementById() e value. Verificamos se algum campo está vazio. Se algum campo estiver vazio, exibimos uma mensagem de erro no console. Caso contrário, exibimos uma mensagem de sucesso no console, juntamente com os valores preenchidos nos campos de nome e email. -->

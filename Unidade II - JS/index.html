@@ -24,7 +24,7 @@
         }
         
     </script>
-   <!-- <script src="script.js"></script> -->
+   <script src="script.js"></script>
     
 </head>
 
@@ -33,13 +33,14 @@
 Fundo:
     <input type="button" value="Branco" onclick="fundoBranco()">
     <input type="button" value="Preto" onclick="fundoPreto()">
-    <h1># Unidade II - Introdução à JavaScript</h1>
+    <h1># Unidade II - Introdução à JavaScript <img src="JavaScript-logo.png" width="30px" alt="" srcset=""></h1>
     <details>
         <summary>
             O que é?
         </summary>
            <p>JavaScript é uma linguagem de programação de alto nível, interpretada e orientada a objetos, utilizada principalmente para adicionar interatividade a páginas web</p>
             <p>
+                <ul><li>Exerce controle sobre o HTML e o CSS para manipular comportamentos de páginas web.</li><li>É independente de plataforma</li><li>Permite a criação de funcionalidades para sites que não podem ser criadas com HTML e CSS.</li><li>O código escrito em Javascript é embutido no próprio arquivo HTML (basta que o programador utilize a tag &lt;script&gt; no momento de escrever as linhas em Javascript.</li><li>Utiliza uma sintaxe familiar, para quem já utiliza Java, C, ou C++.</li><li>Seu modelo de objetos é baseado em protótipos (e não em classes, como é o caso do Java).</li><li>Suporta funções sem requisições especiais de declaração.</li><li>É um tipo de programação dirigida por eventos: possibilita a criação de trechos de programa que respondem a eventos específicos, tais como um clique em um botão.</li></ul>
           
     </details>
 
@@ -59,6 +60,7 @@ Fundo:
             </li>
             <li>
                 <b>Variáveis:</b> Em JavaScript, você pode declarar variáveis usando as palavras-chave <b><i>var, let ou const.</i></b> Variáveis são usadas para armazenar valores, como números, strings, objetos e outros tipos de dados.
+                <a href="script.js" target="_blank">Ver exemplos</a>
             </li>
             <li>
                 <b>Tipagem dinâmica:</b> JavaScript é uma linguagem de tipagem dinâmica, o que significa que você não precisa declarar explicitamente o tipo de uma variável. O tipo de uma variável pode mudar durante a execução do programa.
@@ -80,14 +82,65 @@ Fundo:
             </li>
         </ul>         
     </details>
-    <details>
-        <summary>Eventos</summary>
-        <p>Aqui estão algumas das tags HTML mais utilizadas:</p>
-         eventos
-    </details>
+    
     <details>
         <summary>Condicionais e Loops</summary>
-        condicionais 
+        <p>As estruturas condicionais estão ligadas à tomada de decisão de um algoritmo. Ao utilizar expressões que retornam verdadeiro ou falso, o algoritmo executa o bloco de comandos relativos a este resultado.</p>
+
+<p>Já no caso das estruturas de repetição, elas são úteis quando precisamos repetir N vezes a execução de um bloco de comandos até que uma condição seja atendida.</p>
+<a href="estruturas.js" target="_blank" rel="noopener noreferrer">exemplos</a>
+
+
+    </details>
+    
+    <details>
+        <summary>Eventos</summary>
+        <p>Os eventos são basicamente um conjunto de ações que são realizadas em um determinado elemento da página web, seja ele um texto, uma imagem, ou uma div, por exemplo. Muitas das interações do usuário que está visitando sua página com o conteúdo do seu site podem ser consideradas eventos.</p>
+        <p>Existe uma infinidade de eventos definidos para uso em JavaScript, abaixo podemos ver alguns dos principais e mais utilizados:</p>
+
+        <table>
+            <tbody><tr>
+                <th>onBlur</th>
+                <td>Quando remove o foco do elemento</td>
+                <td> <a href="onblur.html" target="_blank" rel="noopener noreferrer">Exemplo</a></td>
+            </tr>
+            <tr>
+                <th>onChange</th>
+                <td>O evento onChange é utilizado para que seja realizada determinada ação após alguma mudança.</td>
+                <td><a href="onchange.html" target="_blank" rel="noopener noreferrer">Exemplo</a> </td>
+            </tr>
+            <tr>
+                <th>onmousedown, onmouseup e Onclick</th>
+                <td>o elemento é clicado pelo usuário</td>
+                <td> <a href="mouseClick.html" target="_blank" rel="noopener noreferrer">Exemplo</a></td>
+            </tr>
+            <tr>
+                <th>onFocus</th>
+                <td>Quando o elemento é focado</td>
+                <td><a href="onfocus.html" target="_blank" rel="noopener noreferrer">Exemplo</a></td>
+            </tr>
+            <tr>
+                <th>onKeyPress</th>
+                <td>o usuário pressiona uma tecla sobre o elemento</td>
+                <td><a href="onkeypress.html" target="_blank" rel="noopener noreferrer">Exemplo</a></td>
+            </tr>
+            <tr>
+                <th>onLoad</th>
+                <td>O evento onload pode ser usado quando queremos que algo seja carregado junto com o carregamento da página.</td>
+                <td><a href="onload.html" target="_blank" rel="noopener noreferrer">Exemplo</a></td>
+            </tr>
+            <tr>
+                <th>onMouseOver e onMouseOut</th>
+                <td>Esses eventos são responsáveis pelas ações que o usuário faz com o mouse, passando o mouse no elemento e tirando o mouse do elemento, respectivamente.</td>
+                <td><a href="onMouse.html" target="_blank" rel="noopener noreferrer">Exemplo</a></td>
+            </tr>
+             
+            <tr>
+                <th>onSubmit</th>
+                <td>define ação ao enviar um formulário</td>
+                <td><a href="onSubmit.html" target="_blank" rel="noopener noreferrer">Exemplo</a></td>
+            </tr>
+        </tbody></table>
     </details>
 
     <h3>Complementos</h3>
@@ -98,12 +151,7 @@ Fundo:
         <b>Editor:</b> Ritwick Dey<br>
     </div>
     <br>
-    <div>
-        <b>Nome:</b> Auto Rename Tag <a href="https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag">https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag</a><br>
-        <b>Descrição:</b> Auto rename paired HTML/XML tag<br>
-        <b>Versão:</b> 0.1.10<br>
-        <b>Editor:</b> Jun Han<br>
-    </div>
+  
  </div>
 
 </body>

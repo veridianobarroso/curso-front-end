@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Usando eventos no Javascript</title>
+</head>
+<body onload="checkCookies()">
+
+<script>
+
+function checkCookies()
+{
+if (navigator.cookieEnabled==true)
+	{
+	alert("Cookies são permitidos")
+	}
+else
+	{
+	alert("Cookies não são permitidos")
+	}
+}
+</script>
+
+<p>Irá aparecer um alert dizendo se os cookies estão ou não liberados em seu navegador</p>
+
+<!-- Neste exemplo, adicionamos um ouvinte de evento ao objeto window usando o método addEventListener() com o evento "load". Essa função anônima é executada quando a página é totalmente carregada, exibindo a mensagem "A página foi totalmente carregada!" no console.
+
+-->
+<script>
+    window.addEventListener("load", function() {
+      console.log("A página foi totalmente carregada!");
+    });
+  </script>
+
+</body>
+</html>

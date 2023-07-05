@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Usando eventos no Javascript</title>
+</head>
+<body>
+
+<div onmouseover="mOver(this)" onmouseout="mOut(this)"
+style="background-color:#D94A38;width:120px;height:20px;padding:40px;">Passe o mouse em mim</div>
+
+<script>
+function mOver(obj)
+{
+obj.innerHTML="Obrigado"
+}
+
+function mOut(obj)
+{
+obj.innerHTML="Passe o mouse em mim"
+}
+</script>
+
+</body>
+</html>
