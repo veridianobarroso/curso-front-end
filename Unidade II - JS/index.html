@@ -7,8 +7,8 @@
     <title>Unidade 1</title>
     <link rel="stylesheet" href="style.css">
     <script>
-        alert("Bem vindo ao Curso de Engenharia de Software ");
-        console.log("teste de console");
+        // alert("Bem vindo ao Curso de Engenharia de Software ");
+        // console.log("teste de console");
 
         function fundoBranco(){
             let container = document.getElementById('container');
@@ -16,23 +16,37 @@
             container.style.color = "#000"
         }
         function fundoPreto(){
-            let container = document.getElementById('container');
-            container.style.backgroundColor = '#282a36';
-            container.style.color = "#FFF"
-            //console.log(container.style);
+            let p = document.getElementsByTagName('summary');
+            for (let a=0 ; a < p.length ; a++){
+                if(a%2==0){
+                    p[a].style.backgroundColor = '#282a36';
+                }
+            }
+            
+            
             
         }
-        
-    </script>
+        function esconder(){
+            let aa = document.getElementById('container');
+            aa.style.display = "none";
+        }
+        function mostrar(){
+            let aa = document.getElementById('container');
+            aa.style.display = "block";
+        }
+        </script>
    <script src="script.js"></script>
     
 </head>
 
 <body>
+    <input type="button" value="esconder" onclick="esconder()">
+    <input type="button" value="mostrar" onclick="mostrar()">
     <div id="container">
 Fundo:
     <input type="button" value="Branco" onclick="fundoBranco()">
     <input type="button" value="Preto" onclick="fundoPreto()">
+ 
     <h1># Unidade II - Introdução à JavaScript <img src="JavaScript-logo.png" width="30px" alt="" srcset=""></h1>
     <details>
         <summary>

@@ -10,6 +10,7 @@
 function checkCookies()
 {
 if (navigator.cookieEnabled==true)
+
 	{
 	alert("Cookies são permitidos")
 	}
@@ -26,6 +27,8 @@ else
 
 -->
 <script>
+	console.log(navigator.geolocation); 
+
     window.addEventListener("load", function() {
       console.log("A página foi totalmente carregada!");
     });
