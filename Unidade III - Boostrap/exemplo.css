@@ -1,0 +1,42 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background: linear-gradient(90deg, #6610F2 0%, rgba(34, 7, 80, 0.97) 100%);
+    color: #FFF;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    }
+    #wrapper{
+    min-height: 100%;
+    position: relative;
+    }
+    div.body-content{
+      /** Altura do rodapé tem que ser igual a isso aqui e vice-versa **/
+    padding-bottom: 50px;
+    }
+    footer{
+    background: #ffab62;
+    width: 100%;
+    height: 5em;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    }
+    .row{
+        padding-top: 10px;
+    }
+    .login{
+        position: absolute;
+        bottom: 50%;
+
+    }
+    .rodape{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
