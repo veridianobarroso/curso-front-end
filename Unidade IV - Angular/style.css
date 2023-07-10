@@ -25,3 +25,11 @@ details[open] summary::-webkit-details-marker {
 summary::-webkit-details-marker {
    display: none
 }
+li{
+	padding: 5px;
+}
+b{color:chocolate}
+
+h5{
+	padding-top: 7px;
+}
