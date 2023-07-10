@@ -1,0 +1,286 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Angular</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Inclua o CSS do Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <script>
+    function fundoBranco(){
+        let container = document.getElementsByClassName('container');
+        container[0].style.backgroundColor = '#FFF';
+        container[0].style.color = "#000"
+        alterarLinks('blue')
+        alternarCoresSummary('#282a36', '#282')
+    }
+    function fundoPreto(){
+        let container = document.getElementsByClassName('container');
+        container[0].style.backgroundColor = '#000';
+        container[0].style.color = "#FFF"
+        alterarLinks('yellow')
+        alternarCoresSummary('#282a36', 'blue')
+    }
+
+    function alternarCoresSummary(cor1,cor2){
+        let p = document.getElementsByTagName('summary');
+        for (let a=0 ; a < p.length ; a++){
+            if(a%2==0){
+                p[a].style.backgroundColor = cor1;
+            }
+            else{
+                p[a].style.backgroundColor = cor2;
+            }
+        }
+    }
+
+    function alterarLinks(cor){
+        let p = document.getElementsByTagName('a');
+        for (let a=0 ; a < p.length ; a++){
+                p[a].style.color = cor;
+        }
+    }
+    
+    </script>    
+</head>
+<body class="container" onload="fundoPreto()">
+   
+  <div class="container">
+    <h1>Unidade IV - Angular</h1>
+
+
+    
+
+
+
+
+    <details>
+        <summary style="margin-bottom: 10px;">O que é o Angular?</summary>
+        <div class="row">
+            <div class="col-md-4">
+                <p>Angular é um framework de desenvolvimento de aplicativos web de código aberto mantido pelo Google. Ele é uma plataforma completa para a criação de aplicativos web dinâmicos, permitindo que os desenvolvedores criem interfaces de usuário interativas e responsivas.
+                </p>
+            </div>
+            <div class="col-md-4">
+                 <p>
+                    O Angular utiliza a linguagem TypeScript, que é uma extensão do JavaScript, para desenvolver aplicativos. Ele segue o padrão MVC (Model-View-Controller) e fornece recursos poderosos para o desenvolvimento de aplicativos, como manipulação de eventos, gerenciamento de estado, roteamento, criação de componentes reutilizáveis e comunicação com servidores por meio de chamadas HTTP.
+                </p>
+            </div>
+            <div class="col-md-4">
+                <p>
+                    Uma das principais características do Angular é a sua abordagem baseada em componentes. Os aplicativos Angular são construídos a partir de uma hierarquia de componentes interconectados, onde cada componente é responsável por uma parte específica da interface do usuário. Esses componentes podem ser reutilizados e combinados para criar aplicativos complexos.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                O Angular também oferece recursos avançados, como injeção de dependência, testes automatizados, otimização de desempenho e internacionalização. Além disso, possui uma ampla comunidade de desenvolvedores que contribuem com bibliotecas e ferramentas adicionais, aumentando ainda mais a sua funcionalidade.
+            </div>
+            <div class="col-md-6">Com o Angular, os desenvolvedores podem criar aplicativos web escaláveis e de alta qualidade, adequados para uma variedade de casos de uso, desde pequenos projetos até grandes sistemas corporativos.
+            </div>
+        </div>
+    </details>
+
+    <details>
+        <summary>Principais conceitos e fluxos de trabalho do Angular</summary>
+        <div class="row">
+          <div class="col-md-12">
+              O Angular é um framework que segue o padrão de arquitetura de software MVC (Model-View-Controller) e utiliza a linguagem TypeScript para o desenvolvimento de aplicativos web. Ele funciona de maneira semelhante a outros frameworks, mas com suas próprias peculiaridades. VVamos aos principais conceitos e fluxos de trabalho do Angular:
+              
+              <ol>
+                  <li>
+                      Componentes: O Angular é baseado em componentes. Um componente é uma unidade independente que encapsula o comportamento e a aparência de uma parte específica da interface do usuário. Cada componente possui seu próprio template HTML, estilos CSS e lógica de negócio escrita em TypeScript. Os componentes podem ser reutilizados em diferentes partes do aplicativo.
+                      
+            </li>
+            <li>
+                Templates: Os templates definem a estrutura e a aparência dos componentes. Eles são escritos em HTML com extensões e diretivas específicas do Angular. No template, é possível utilizar diretivas estruturais (como *ngFor e *ngIf) para iterar sobre listas ou controlar a exibição condicional de elementos.
+                
+            </li>
+            <li>
+                
+                Data Binding: O Angular oferece recursos avançados de data binding para sincronizar dados entre o componente e o template. Existem diferentes tipos de data binding disponíveis, como interpolação ({{ }}), property binding ([ ]), event binding (( )), two-way binding ([()]), etc. Esses mecanismos permitem atualizar e exibir os dados de forma dinâmica na interface do usuário.
+            </li>
+            <li>
+                Serviços: Os serviços são classes que contêm lógica de negócio reutilizável e são injetados nos componentes que precisam deles. Eles são usados para compartilhar dados, realizar chamadas HTTP, gerenciar autenticação, entre outras tarefas. Os serviços ajudam a manter os componentes mais leves e facilitam a reutilização de código.
+                
+            </li>
+            <li>
+                Injeção de Dependência: O Angular possui um sistema de injeção de dependência embutido, que facilita a gestão das dependências entre os diferentes componentes e serviços. Ele permite que os componentes recebam instâncias de serviços de que necessitam, em vez de criá-los diretamente. Isso torna o código mais modular, testável e flexível.
+
+            </li>
+            <li>
+                Roteamento: O Angular possui um módulo de roteamento que permite a criação de aplicativos de várias páginas. Com o roteamento, é possível definir rotas para diferentes URLs e associá-las a componentes específicos. Isso permite que os usuários naveguem entre as diferentes partes do aplicativo sem precisar recarregar a página.
+
+            </li>
+            <li>
+                Ciclo de vida dos componentes: Os componentes do Angular possuem um ciclo de vida definido, com diferentes fases. Essas fases incluem a inicialização do componente, a atualização dos dados, a detecção de mudanças e a destruição do componente. O desenvolvedor pode aproveitar esses eventos para executar ações específicas em cada fase.
+
+            </li>
+           </ol>
+          
+          </div>
+          <div class="row">
+            <img src="Building-blocks-angular.png" width="100%" alt="" srcset="">
+          </div>
+    </details>
+
+    <details>
+        <summary>Iniciando o Angular</summary>
+        <div class="row">
+            <div class="col-md-6">
+            <h4>Requisitos</h4>
+            <p><code>Node.js</code></p>
+            <p><code>npm package manager</code></p>
+            </div>
+
+            <div class="col-md-6">
+                <h4>
+                    <a href="https://angular.io/quick-start" target="_blank" rel="noopener noreferrer">Primeiros passos</a>
+                </h4>
+            <ol>
+                <li>Instalando o CLI <code>> sudo npm install -g @angular/cli</code></li>
+                <li>Criando os arquivos <code>> ng new my-app</code></li>
+                <li>Selecionar a pasta <code>> cd my-app</code></li>
+                <li>Executando a aplicação <code>> ng serve --open</code></li>
+            </ol> 
+            </div>
+        </div>
+    </details>
+    
+    <details>
+        <summary>Elementos do Angular</summary>
+        <div class="row">
+            <div class="col">
+                <h5>Components</h5>
+                <code>ng generate component nome-do-componente</code>
+            </div>
+            <div class="col">
+                <h5>Templates</h5>
+            </div>
+            <div class="col">
+                <h5>Diretivas</h5>
+            </div>
+            <div class="col">
+                <h5>Services</h5>
+            </div>
+            
+            <div class="col">
+                <h5>Roteamento</h5>
+            </div>
+        </div>
+        
+    </details>
+    <details>
+        <summary>TypeScript</summary>
+        <div class="row">
+          <div class="col-md-12">
+              O Angular é um framework que segue o padrão de arquitetura de software MVC (Model-View-Controller) e utiliza a linguagem TypeScript para o desenvolvimento de aplicativos web. Ele funciona de maneira semelhante a outros frameworks, mas com suas próprias peculiaridades. VVamos aos principais conceitos e fluxos de trabalho do Angular:
+              
+              <ol>
+                  <li>
+                      Componentes: O Angular é baseado em componentes. Um componente é uma unidade independente que encapsula o comportamento e a aparência de uma parte específica da interface do usuário. Cada componente possui seu próprio template HTML, estilos CSS e lógica de negócio escrita em TypeScript. Os componentes podem ser reutilizados em diferentes partes do aplicativo.
+                      
+            </li>
+            <li>
+                Templates: Os templates definem a estrutura e a aparência dos componentes. Eles são escritos em HTML com extensões e diretivas específicas do Angular. No template, é possível utilizar diretivas estruturais (como *ngFor e *ngIf) para iterar sobre listas ou controlar a exibição condicional de elementos.
+                
+            </li>
+            <li>
+                
+                Data Binding: O Angular oferece recursos avançados de data binding para sincronizar dados entre o componente e o template. Existem diferentes tipos de data binding disponíveis, como interpolação ({{ }}), property binding ([ ]), event binding (( )), two-way binding ([()]), etc. Esses mecanismos permitem atualizar e exibir os dados de forma dinâmica na interface do usuário.
+            </li>
+            <li>
+                Serviços: Os serviços são classes que contêm lógica de negócio reutilizável e são injetados nos componentes que precisam deles. Eles são usados para compartilhar dados, realizar chamadas HTTP, gerenciar autenticação, entre outras tarefas. Os serviços ajudam a manter os componentes mais leves e facilitam a reutilização de código.
+                
+            </li>
+            <li>
+                Injeção de Dependência: O Angular possui um sistema de injeção de dependência embutido, que facilita a gestão das dependências entre os diferentes componentes e serviços. Ele permite que os componentes recebam instâncias de serviços de que necessitam, em vez de criá-los diretamente. Isso torna o código mais modular, testável e flexível.
+
+            </li>
+            <li>
+                Roteamento: O Angular possui um módulo de roteamento que permite a criação de aplicativos de várias páginas. Com o roteamento, é possível definir rotas para diferentes URLs e associá-las a componentes específicos. Isso permite que os usuários naveguem entre as diferentes partes do aplicativo sem precisar recarregar a página.
+
+            </li>
+            <li>
+                Ciclo de vida dos componentes: Os componentes do Angular possuem um ciclo de vida definido, com diferentes fases. Essas fases incluem a inicialização do componente, a atualização dos dados, a detecção de mudanças e a destruição do componente. O desenvolvedor pode aproveitar esses eventos para executar ações específicas em cada fase.
+
+            </li>
+           </ol>
+           Esses são apenas alguns dos principais conceitos e recursos do Angular. O framework possui uma ampla gama de recursos adicionais, como formulários reativos, validação de entrada, testes automatizados, entre outros. O Angular oferece uma estrutura robusta para o desenvolvimento de aplicativos web e tem sido amplamente adotado na indústria devido à sua escalabilidade, desempenho e ferramentas de suporte.
+          </div>
+    </details>
+
+    <div class="row">
+        <div class="col-md-12">
+          <h6>Referências</h6>
+            <ul>
+                <li>
+                    <a href="https://angular.io" target="_blank" rel="noopener noreferrer">
+                    Angular
+                    </a>
+                </li>
+               
+ 
+
+            </ul>
+            <h6>Complementos</h6>
+            <ul>
+                <li>
+                    <a href="https://marketplace.visualstudio.com/items?itemName=alexiv.vscode-angular2-files">
+                    Angular Files - Complemento do Vscode
+                    </a>
+                </li>
+                <li>
+                    <a href="https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme">
+                        Material Icon Theme
+                    </a>
+                </li>
+                <li>
+                    <a href="https://marketplace.visualstudio.com/items?itemName=Angular.ng-template">
+                        Angular Language Service
+                    </a>
+                </li>
+ 
+
+            </ul>
+            <h6>Códigos</h6>
+            <ul>
+                <li>
+                    <b>Atualizar versão do Node</b>
+                    <ul>
+                        <li>
+                            <code>sudo npm cache clean -f</code>
+                        </li>
+                        <li>
+                            <code>sudo npm install -g n</code>
+                        </li>
+                        <li>
+                            <code>sudo n stable</code>
+
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+
+
+    </div>
+  </div>
+
+  <!-- Inclua o JavaScript do Bootstrap -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+</body>
+</html>
+
+
+ 
+ 
