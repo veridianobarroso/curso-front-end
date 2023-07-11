@@ -11,7 +11,6 @@ export class MyServiceService {
   }
 
   obterDados():any[]{
-
     return this.dados;
   }
   zerar(){

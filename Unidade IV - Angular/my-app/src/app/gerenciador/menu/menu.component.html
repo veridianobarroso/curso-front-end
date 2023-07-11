@@ -1,0 +1,21 @@
+<p>
+  menu works!
+</p>
+
+<ul>
+  <li>
+    <a [routerLink]="['/painel/']" >
+      Home
+    </a>
+  </li>
+  <li>
+    <a [routerLink]="['/painel/', {outlets: {painel: 'cadastro'}}]" >
+      Cadastro
+    </a>
+  </li>
+  <li>
+    <a [routerLink]="['/painel/', {outlets: {painel: 'noticias'}}]" >
+      Noticias
+    </a>
+  </li>
+</ul>

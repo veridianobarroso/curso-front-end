@@ -373,22 +373,77 @@
    
 
     <details>
-        <summary>Angular: Roteamento </summary>
+        <summary>Angular: Rotas </summary>
         <div class="row">
             <div class="col">
-             Aula dia 12/07/2023
-            </div>
-        </div>
-        
-    </details>
+                <p>As rotas são definidas por dois elementos principais, o Path, que é o caminho (URL) e o Componente, que é o componente a ser carregado.</p>
+                <p>É uma maneira simples de navegar nas páginas do nosso app. Tecnicamente não temos múltiplas páginas no Angular, apenas carregamos diferentes componentes, desta forma economizamos dados e fazemos a página parecer diferente.</p>
 
-    <details>
-        <summary>Angular: Ciclo de Vida </summary>
-        <div class="row">
-            <div class="col">
-                Aula dia 12/07/2023
+                <p>Para implementar rotas no Angular, você pode seguir os seguintes passos:</p>
+                
+                <p> <b>Passo 1:</b> No módulo principal do seu aplicativo Angular (geralmente chamado de AppModule), você precisa importar o módulo de roteamento do Angular e configurar as rotas do seu aplicativo. Você pode fazer isso adicionando o seguinte código:</p>
+
+                <img src="./images/rota1.png" width="500px" srcset="">
+               
+               <p>
+                   No exemplo acima, importamos o <code>RouterModule</code> e o <code> Routes</code> do pacote <code> @angular/router</code>. Em seguida, definimos um array de objetos de rota <code>routes</code>, onde cada objeto especifica o caminho da rota e o componente associado a esse caminho. Neste caso, temos uma rota vazia ('') que corresponde ao componente <code> HomeComponent</code> e uma rota <code> '/about'</code> que corresponde ao componente <code>AboutComponent</code>.
+               </p> 
+
+               <p>
+                <b>Passo 2:</b>  No template do seu componente principal (geralmente chamado de AppComponent), você precisa adicionar o elemento <code> &lt;router-outlet></code>. Este elemento é onde os componentes correspondentes às rotas serão renderizados. Por exemplo:
+               </p>
+<p>
+                <code>   -- app.component.html  -- <br>
+                &lt;h1>Meu Aplicativo Angular &lt;h1> <br>
+                &lt;router-outlet>&lt;router-outlet> </code>
+            </p>
+                <p>
+                    <b>Passo 3:</b>  Navegação entre rotas. Agora que você configurou as rotas, pode navegar entre elas usando o serviço  <code> Router</code> fornecido pelo Angular. Por exemplo, você pode adicionar um link de navegação em um template para ir para a rota 'about':
+                   </p>
+    <p>
+                    <code>   -- home.component.html  -- <br>
+                    &lt;h2>Página Inicial &lt;h1> <br>
+                    &lt;a routerLink="/about"> Ir para a página Sobre &lt;/a></code>
+                </p>
+                <p>Ou colocando no codigo .ts:</p>
+                <p>
+                    <code>constructor(private router: Router) { }</code> <br>
+                    <code>...</code><br>
+                    <code>this.router.navigate(['/user']);</code><br>
+                    <code>...</code>
+                </p>
+                    <p>
+                    No exemplo acima, usamos a diretiva <code> routerLink</code> para criar um link que navega para a rota <code>'/about'</code> quando clicado.
+                    </p>
+
             </div>
         </div>
+<h5><b>Acessando parâmetros</b></h5>
+        <div class="row">
+            <div class="col">
+                Para obter os valores dos parâmetros passados pela rota no Angular, você pode usar o serviço <code>ActivatedRoute</code>. Existem duas maneiras comuns de acessar os parâmetros da rota: usando <code> snapshot</code> e <code> subscribe</code> para obter os parâmetros de forma síncrona ou assíncrona, respectivamente.
+
+                No exemplo abaixo, o componente ExemploComponent injeta o serviço ActivatedRoute e usa o snapshot ou o método subscribe para acessar os parâmetros da rota.
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+               <b> Usando snapshot (síncrono):</b>
+               <p>
+                <img src="./images/Param1.png"  width="100%" srcset="">
+               </p>
+                 
+            </div>
+       
+            <div class="col">
+                <b>Usando subscribe (assíncrono):</b>
+                <p>
+                    <img src="./images/param2.png" alt="" width="100%" srcset="">
+                </p>
+            </div>
+        </div>
+
+<p>Ao utilizar o <code> snapshot</code>, você obtém os valores dos parâmetros uma vez, quando o componente é inicializado. Já com o <code> subscribe</code>, você pode receber atualizações dos valores dos parâmetros caso eles mudem sem a necessidade de recarregar o componente.</p>
         
     </details>
 
@@ -408,7 +463,7 @@
           <h6>Referências</h6>
             <ul>
                 <li>
-                    <a href="https://angular.io" target="_blank" rel="noopener noreferrer">
+                    <a href="https://angular.i</code>o" target="_blank" rel="noopener noreferrer">
                     Angular
                     </a>
                 </li>
@@ -433,6 +488,13 @@
                         Angular Language Service
                     </a>
                 </li>
+                
+
+                <li>
+                    <a href="https://primeng.org/installation">
+                        PrimeNG
+                    </a>
+                </li>
  
 
             </ul>
@@ -449,6 +511,22 @@
                         </li>
                         <li>
                             <code>sudo n stable</code>
+
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <b>Para instalar o Bootstrap ou outro módulo, na pasta da aplicação digite o codigo abaixo.</b>
+                    <ul>
+                        <li>
+                            <code>npm i bootstrap</code>
+                        </li>
+                        <li>
+                            <code>Nas dependências do package.json constará o módulo baixado</code>
+                        </li>
+                        <li>
+                            <code>Agora vá no arquivo angular.json e adicione o codigo abaixo em "styles"</code><br>
+                            <code>"node_modules/bootstrap/dist/css/bootstrap.min.css"</code>
 
                         </li>
                     </ul>

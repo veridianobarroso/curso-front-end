@@ -1,0 +1,46 @@
+<p>
+  teste works!
+</p>
+
+<h2>{{title}}</h2>
+
+<hr>
+
+<input type="text" [value]="nome" *ngIf="mostrar">
+
+<hr>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <form [formGroup]="formulario" >
+
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Nome</label>
+          <input type="text" formControlName="nome" class="form-control" id="name" placeholder="Digite um nome">
+        </div>
+
+        <button type="button" class="btn btn-primary" (click)="adicionar()">Adicionar</button> 
+        <button type="button" class="btn btn-secondary" (click)="listar()" >Listar</button> 
+        <button type="button" class="btn btn-danger" (click)="zerar()">Apagar</button> 
+
+      </form>
+    </div>
+    <div class="col"><h4>
+      Adicionados: 
+      <br>
+      {{listagem | json}}
+    </h4>
+    
+    
+    
+    <ul *ngFor="let item of listagem">
+      <li>
+        {{item}}
+      </li>
+    </ul></div>
+  </div>
+</div>
+
+<a [routerLink]="['/painel/']" >
+  Home
+</a>
