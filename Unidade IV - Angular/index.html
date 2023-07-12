@@ -140,6 +140,7 @@
                 <li>Criando os arquivos <code>> ng new my-app</code></li>
                 <li>Selecionar a pasta <code>> cd my-app</code></li>
                 <li>Executando a aplicação <code>> ng serve --open</code></li>
+                <li>Também pode deixar visivel na rede: <code>ng s --host 0.0.0.0</code></li>
             
             </ol> 
             Para instalar o codigo vindo de algum repo <code>> npm install</code>
@@ -427,7 +428,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col">
+            <div class="col-md-6">
                <b> Usando snapshot (síncrono):</b>
                <p>
                 <img src="./images/Param1.png"  width="100%" srcset="">
@@ -435,7 +436,7 @@
                  
             </div>
        
-            <div class="col">
+            <div class="col-md-6">
                 <b>Usando subscribe (assíncrono):</b>
                 <p>
                     <img src="./images/param2.png" alt="" width="100%" srcset="">
@@ -451,7 +452,48 @@
         <summary>Angular: Protocolo HTTP - API </summary>
         <div class="row">
             <div class="col">
-                Aula dia 12/07/2023
+                Para realizar uma conexão a uma API utilizando o Angular, você pode seguir os seguintes passos:
+                <ul>
+                    <li>
+                        <p>
+                            <b>Passo 1: Importar o módulo HttpClientModule</b>
+                        </p>
+                        <p>
+                            Importar no módulo principal para poder usar os recursos de HTTP do Angular, pode ser da seguinte forma:
+                        </p>
+                        <img src="./images/http1.png" width="400px" alt="" srcset="">
+                    </li>
+                    <li>
+                        <p>
+                            <b>Passo 2: Criar um serviço para realizar a chamada à API</b>
+                        </p>
+                        <p>
+                            Crie um serviço no Angular para encapsular a lógica de chamada à API. O serviço será responsável por fazer a requisição HTTP para a API e retornar os dados para o componente que solicitou. Você pode criar um serviço utilizando o comando <code> ng generate service</code> ou criando manualmente um novo arquivo de serviço.
+                        </p>
+                        <p>
+                            Por exemplo, suponha que você esteja criando um serviço chamado <code>ApiService</code>. No arquivo <code> api.service.ts</code>, você pode adicionar o seguinte código:
+                        </p>
+                        <img src="./images/http2.png" width="400px" alt="" srcset="">
+                        <p>
+                            No exemplo acima, o serviço <code>ApiService</code> injeta o <code>HttpClient</code> como uma dependência para realizar chamadas HTTP. Duas funções são definidas: <code>getData()</code> para fazer uma solicitação GET à API e <code>postData()</code> para fazer uma solicitação POST à API.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <b>Passo 3: Usar o serviço no componente</b>
+                        </p>
+                        <p>
+                            Agora você pode usar o serviço <code>ApiService</code> em um componente para realizar chamadas à API. Para fazer isso, injete o serviço no construtor do componente e chame as funções do serviço conforme necessário.
+                        </p>
+                        <p>Por exemplo, suponha que você tenha um componente chamado <code>ExemploComponent</code>. No arquivo <code>exemplo.component.ts</code>, você pode adicionar o seguinte código:
+
+                        </p>
+                        <img src="./images/http3.png" width="400px" alt="" srcset="">
+                        <p>
+                            No exemplo acima, o componente <code>ExemploComponent</code> injeta o <code>ApiService</code> no construtor e utiliza as funções <code>getData()</code> e <code>postData()</code> para fazer as chamadas à API. A função <code>fetchData()</code> faz uma chamada GET para obter dados da API, enquanto a função <code>sendData()</code> faz uma chamada POST com os dados fornecidos.
+                        </p>
+                    </li>
+                </ul>
             </div>
         </div>
         
