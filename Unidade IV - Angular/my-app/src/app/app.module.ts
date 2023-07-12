@@ -11,6 +11,8 @@ import { AutenticarComponent } from './autenticar/autenticar.component';
 import { DetalheComponent } from './detalhe/detalhe.component';
 import { HttpClientModule } from '@angular/common/http';
 
+import { ButtonModule } from 'primeng/button';
+
 
 @NgModule({
   declarations: [								
@@ -23,7 +25,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule    
+    HttpClientModule,
+    ButtonModule    
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -8,7 +8,7 @@ import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
 import { PainelComponent } from './painel/painel.component';
-
+import { ButtonModule } from 'primeng/button';
 
 @NgModule({
   declarations: [					
@@ -20,7 +20,9 @@ import { PainelComponent } from './painel/painel.component';
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    RouterModule
+    RouterModule,
+    ButtonModule
+
   ],
   providers: [],
 })
